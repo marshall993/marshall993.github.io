@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a class="cv-button" href="#projects">My projects</a>
-
   <div class="cv">
     <main>
       <h1 class="cv__title">
@@ -19,14 +17,15 @@
       </h1>
 
       <div class="cv__header">
-        <h2 class="cv__heading">Work Experience</h2>
+        <h2 id="work-experience" class="cv__heading">Work Experience</h2>
       </div>
 
       <div class="cv__row">
         <div class="cv__item">
           <div class="cv__indicator cv__indicator--present">
-            <div class="indicator__inner"></div>
+            <div class="cv__indicator-inner"></div>
           </div>
+
           <h3 class="cv__position">Intermediate Developer</h3>
           <h4 class="cv__row-organization">Pixel Union</h4>
           <p class="cv__date">2019 - Present</p>
@@ -34,30 +33,60 @@
 
         <div class="cv__item">
           <div class="cv__indicator">
-            <div class="indicator__inner"></div>
+            <div class="cv__indicator-inner"></div>
           </div>
+
           <h3 class="cv__position">Front End Developer</h3>
           <h4 class="cv__row-organization">Out of the Sandbox</h4>
           <p class="cv__date">2015 - 2019</p>
         </div>
+
+        <div class="cv__item">
+          <div class="cv__indicator">
+            <div class="cv__indicator-inner"></div>
+          </div>
+
+          <h3 class="cv__position">Web Designer</h3>
+          <h4 class="cv__row-organization">Guides.co</h4>
+          <p class="cv__date">2014 - 2015</p>
+        </div>
       </div>
 
       <div class="cv__header">
-        <h2 class="cv__heading">Education</h2>
+        <h2 id="education" class="cv__heading">Education</h2>
       </div>
 
       <div class="cv__row">
         <div class="cv__item">
           <div class="cv__indicator">
-            <div class="indicator__inner"></div>
+            <div class="cv__indicator-inner"></div>
           </div>
+
           <h3 class="cv__position">Interactive Multimedia Developer</h3>
           <h4 class="cv__row-organization">Algonquin College</h4>
           <p class="cv__date">2014 - 2016</p>
         </div>
       </div>
+
+      <div class="cv__header">
+        <h2 id="projects" class="cv__heading">Projects</h2>
+      </div>
+
+      <div class="cv__row">
+        <div class="cv__item">
+        </div>
+      </div>
     </main>
-    <aside></aside>
+
+    <aside>
+      <nav>
+        <ul class="cv__nav">
+          <li><a class="cv__nav-item" href="#work-experience">Work Experience</a></li>
+          <li><a class="cv__nav-item" href="#education">Education</a></li>
+          <li><a class="cv__nav-item" href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </aside>
   </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 :root {
   --body-background-color: #F6F4EB;
   --primary-color: #000000;
+  --secondary-color: #116A7B;
 }
 
 html {
@@ -11,6 +12,7 @@ body {
   font-family: "Merriweather", serif;
   background-color: var(--body-background-color);
   margin: 0;
+  padding: 5rem 1rem;
 }
 
 main {
@@ -18,11 +20,17 @@ main {
   flex-direction: column;
   flex: 2;
   gap: 2rem;
-  padding: 5rem 0;
 }
 
 aside {
-  flex: 1;
+  display: none;
+}
+@media only screen and (min-width: 767px) {
+  aside {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
 }
 
 h1 {
@@ -39,10 +47,19 @@ h1 {
 
 h2 {
   margin-top: 0;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .cv__heading {
   margin: 0;
+}
+
+.cv__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
 }
 
 .cv-button {
@@ -59,7 +76,18 @@ h2 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  padding: 0 1rem;
+}
+
+.cv__row {
+  background: #f0eee6;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 2px dashed black;
+}
+
+.cv__nav-item {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .cv__item {
@@ -91,26 +119,27 @@ h2 {
   transition: 0.5s;
 }
 .cv__indicator.cv__indicator--present {
-  animation: 1s scale-indicator infinite;
+  animation: 1s scale-indicator ease-in-out infinite;
 }
 
-.indicator__inner {
+.cv__indicator-inner {
   background-color: var(--primary-color);
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   transition: 0.5s;
 }
-.cv__indicator--present .indicator__inner {
-  animation: 1s color-indicator infinite;
+.cv__indicator--present .cv__indicator-inner {
+  animation: 1s color-indicator ease-in-out infinite;
 }
 
+/* Animations */
 @keyframes color-indicator {
   0% {
     background-color: var(--primary-color);
   }
   50% {
-    background-color: #116A7B;
+    background-color: var(--secondary-color);
   }
   100% {
     background-color: var(--primary-color);
