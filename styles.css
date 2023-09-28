@@ -80,7 +80,7 @@ h2 {
 
 .cv__row {
   background: #f0eee6;
-  padding: 2rem;
+  padding: 2rem 3rem;
   border-radius: 5px;
   border: 2px dashed black;
 }
@@ -94,7 +94,6 @@ h2 {
   position: relative;
   border-left: 2px dashed var(--primary-color);
   padding: 0 0 2rem 2rem;
-  margin-left: 1.5rem;
 }
 .cv__item:last-child {
   padding-bottom: 0;
