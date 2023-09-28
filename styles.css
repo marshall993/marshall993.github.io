@@ -1,7 +1,8 @@
 :root {
   --body-background-color: #F6F4EB;
   --primary-color: #000000;
-  --secondary-color: #116A7B;
+  --secondary-color: #016A70;
+  --button-padding: 1rem;
 }
 
 html {
@@ -51,6 +52,38 @@ h2 {
   font-size: 20px;
 }
 
+.cv__button {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: var(--button-padding);
+  border-radius: 5px;
+}
+
+.cv__projects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cv__projects li {
+  border-bottom: 2px dashed #000000;
+}
+.cv__projects li:last-child {
+  border-bottom: none;
+}
+.cv__projects a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: black;
+  border-radius: 5px;
+}
+
 .cv__heading {
   margin: 0;
 }
@@ -79,7 +112,7 @@ h2 {
 }
 
 .cv__row {
-  background: #f0eee6;
+  background-color: #ffffff;
   padding: 2rem 3rem;
   border-radius: 5px;
   border: 2px dashed black;
