@@ -5,6 +5,74 @@
   --button-padding: 1rem;
 }
 
+@font-face {
+  font-family: 'Basier Circle';
+  src: url('BasierCircle-Regular.eot');
+  src: local('Basier Circle Regular'), local('BasierCircle-Regular'),
+      url('BasierCircle-Regular.eot?#iefix') format('embedded-opentype'),
+      url('BasierCircle-Regular.woff2') format('woff2'),
+      url('BasierCircle-Regular.woff') format('woff'),
+      url('BasierCircle-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Basier Circle';
+  src: url('BasierCircle-Medium.eot');
+  src: local('Basier Circle Medium'), local('BasierCircle-Medium'),
+      url('BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
+      url('BasierCircle-Medium.woff2') format('woff2'),
+      url('BasierCircle-Medium.woff') format('woff'),
+      url('BasierCircle-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Basier Circle';
+  src: url('BasierCircle-Bold.eot');
+  src: local('Basier Circle Bold'), local('BasierCircle-Bold'),
+      url('BasierCircle-Bold.eot?#iefix') format('embedded-opentype'),
+      url('BasierCircle-Bold.woff2') format('woff2'),
+      url('BasierCircle-Bold.woff') format('woff'),
+      url('BasierCircle-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cooper_lt_btlight';
+  src: url('cooperbt-light-webfont.woff2') format('woff2'),
+       url('cooperbt-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cooper_md_btmedium';
+  src: url('cooperbt-medium-webfont.woff2') format('woff2'),
+       url('cooperbt-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'cooper_md_btmedium';
+}
+
+.test {
+  font-family: 'Basier Circle';
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,6 +82,7 @@ body {
   background-color: var(--body-background-color);
   margin: 0;
   padding: 5rem 1rem;
+  box-sizing: border-box;
 }
 
 main {
@@ -36,30 +105,38 @@ aside {
 h1 {
   margin: 0;
   font-weight: normal;
-  line-height: 1.25;
-  letter-spacing: -1px;
+  font-family: 'cooper_lt_btlight';
 
   @media only screen and (min-width: 767px) {
-    font-size: 3.5rem;
+    font-size: 2.85rem;
   }
 }
 
 h2 {
   margin-top: 0;
-  font-style: italic;
   font-size: 20px;
 }
 
-.cv__button {
+.cv__button-container {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.cv__button {
+  display: none;
   background-color: var(--secondary-color);
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
   padding: var(--button-padding);
-  border-radius: 5px;
+  border-radius: 5px; 
+  text-align: center;
 }
 
 .cv__projects {
@@ -79,6 +156,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-weight: bold;
     padding: 1rem;
     color: black;
     border-radius: 5px;
@@ -96,20 +174,11 @@ h2 {
   list-style: none;
 }
 
-.cv-button {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  color: #000000;
-  display: block;
-  padding: 1rem;
-  font-weight: bold;
-}
-
 .cv {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 
 .cv__row {
@@ -117,6 +186,7 @@ h2 {
   padding: 2rem 3rem;
   border-radius: 5px;
   border: 2px dashed black;
+  box-shadow: #e6e4db 10px 10px 0px;
 }
 
 .cv__nav-item {
