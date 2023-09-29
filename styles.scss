@@ -1,10 +1,3 @@
-:root {
-  --body-background-color: #F6F4EB;
-  --primary-color: #000000;
-  --secondary-color: #016A70;
-  --button-padding: 1rem;
-}
-
 @font-face {
   font-family: 'Basier Circle';
   src: url('BasierCircle-Regular.eot');
@@ -18,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'Basier Circle';
+  font-family: 'Basier Circle Medium';
   src: url('BasierCircle-Medium.eot');
   src: local('Basier Circle Medium'), local('BasierCircle-Medium'),
       url('BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
@@ -57,6 +50,106 @@
   font-style: normal;
 }
 
+:root {
+  --body-background-color: #F6F4EB;
+  --primary-color: #000000;
+  --secondary-color: #016A70;
+  --button-padding: 1rem;
+  --border-color: #001524;
+  --body-color: #001524;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--body-color);
+  font-family: 'Basier Circle';
+  background-color: var(--body-background-color);
+}
+
+.site-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+
+header {
+  margin-bottom: 3.5rem;
+  padding: 1rem 0;
+}
+
+.header__container {
+  @extend .site-container;
+}
+
+/* Sections */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform 0.25s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+  }
+}
+
+.section__heading {
+  font-family: 'Basier Circle Medium';
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.section__card {
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  border: 2px dashed #001524;
+  box-shadow: #e6e4db 10px 10px 0px;
+}
+
+.section__card-content {
+  position: relative;
+  border-left: 2px dashed var(--primary-color);
+  padding: 0 0 2rem 2rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+/* Footer */
+
+footer {
+  color: #ffffff;
+  background-color: #001524;
+  padding: 2rem 0;
+  margin-top: 3.5rem;
+}
+
+.footer__container {
+  @extend .site-container;
+}
+
+/* Headings */
+
 h1,
 h2,
 h3,
@@ -66,23 +159,24 @@ h6 {
   font-family: 'cooper_md_btmedium';
 }
 
+.heading {
+  margin: 0;
+  font-family: 'cooper_lt_btlight';
+
+  span {
+    font-family: 'cooper_md_btmedium';
+  }
+
+  @media only screen and (min-width: 767px) {
+    font-size: 2.85rem;
+  }
+}
+
 .test {
   font-family: 'Basier Circle';
   font-size: 18px;
   line-height: 1.5;
   margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Merriweather', serif;
-  background-color: var(--body-background-color);
-  margin: 0;
-  padding: 5rem 1rem;
-  box-sizing: border-box;
 }
 
 main {
@@ -102,41 +196,9 @@ aside {
   }
 }
 
-h1 {
-  margin: 0;
-  font-weight: normal;
-  font-family: 'cooper_lt_btlight';
-
-  @media only screen and (min-width: 767px) {
-    font-size: 2.85rem;
-  }
-}
-
 h2 {
   margin-top: 0;
   font-size: 20px;
-}
-
-.cv__button-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  padding: 1rem;
-  background-color: #ffffff;
-  box-sizing: border-box;
-}
-
-.cv__button {
-  display: none;
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-  padding: var(--button-padding);
-  border-radius: 5px; 
-  text-align: center;
 }
 
 .cv__projects {
@@ -163,15 +225,19 @@ h2 {
   }
 }
 
-.cv__heading {
-  margin: 0;
-}
+/* Sidebar */
 
-.cv__nav {
+.sidebar__nav-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   list-style: none;
+}
+
+.sidebar__nav-link {
+  font-family: 'cooper_md_btmedium';
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .cv {
@@ -185,23 +251,8 @@ h2 {
   background-color: #ffffff;
   padding: 2rem 3rem;
   border-radius: 5px;
-  border: 2px dashed black;
+  border: 2px dashed #001524;
   box-shadow: #e6e4db 10px 10px 0px;
-}
-
-.cv__nav-item {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.cv__item {
-  position: relative;
-  border-left: 2px dashed var(--primary-color);
-  padding: 0 0 2rem 2rem;
-
-  &:last-child {
-    padding-bottom: 0;
-  }
 }
 
 .cv__position {
