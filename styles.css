@@ -13,7 +13,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Basier Circle";
+  font-family: "Basier Circle Bold";
   src: url("BasierCircle-Bold.eot");
   src: local("Basier Circle Bold"), local("BasierCircle-Bold"), url("BasierCircle-Bold.eot?#iefix") format("embedded-opentype"), url("BasierCircle-Bold.woff2") format("woff2"), url("BasierCircle-Bold.woff") format("woff"), url("BasierCircle-Bold.ttf") format("truetype");
   font-weight: bold;
@@ -35,9 +35,17 @@
   --body-background-color: #F6F4EB;
   --primary-color: #000000;
   --secondary-color: #016A70;
+  --accent-color: #016A70;
   --button-padding: 1rem;
   --border-color: #001524;
   --body-color: #001524;
+  --nav-link-color: #ffffff;
+  --navbar-background-color: #1A1C20;
+}
+
+.dark-mode {
+  --body-color: #ffffff;
+  --body-background-color: #1A1C20;
 }
 
 html {
@@ -52,7 +60,7 @@ body {
   background-color: var(--body-background-color);
 }
 
-.site-container, .footer__container, .header__container {
+.site-container, .header__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -60,9 +68,14 @@ body {
 
 .container {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 4rem auto;
+  gap: 3rem;
 }
 
 /* Header */
@@ -77,10 +90,6 @@ header {
   flex-direction: column;
   gap: 1.25rem;
   transition: transform 0.25s ease-in-out;
-}
-.section:hover {
-  cursor: pointer;
-  transform: scale(1.025);
 }
 
 .section__heading {
@@ -108,14 +117,6 @@ header {
   padding-bottom: 0;
 }
 
-/* Footer */
-footer {
-  color: #ffffff;
-  background-color: #001524;
-  padding: 2rem 0;
-  margin-top: 3.5rem;
-}
-
 /* Headings */
 h1,
 h2,
@@ -124,6 +125,7 @@ h4,
 h5,
 h6 {
   font-family: "cooper_md_btmedium";
+  font-weight: normal;
 }
 
 .heading {
@@ -136,31 +138,6 @@ h6 {
 @media only screen and (min-width: 767px) {
   .heading {
     font-size: 2.85rem;
-  }
-}
-
-.test {
-  font-family: "Basier Circle";
-  font-size: 18px;
-  line-height: 1.5;
-  margin: 0;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-  gap: 2rem;
-}
-
-aside {
-  display: none;
-}
-@media only screen and (min-width: 767px) {
-  aside {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
   }
 }
 
@@ -188,20 +165,6 @@ h2 {
   padding: 1rem;
   color: black;
   border-radius: 5px;
-}
-
-/* Sidebar */
-.sidebar__nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  list-style: none;
-}
-
-.sidebar__nav-link {
-  font-family: "cooper_md_btmedium";
-  color: var(--primary-color);
-  text-decoration: none;
 }
 
 .cv {
