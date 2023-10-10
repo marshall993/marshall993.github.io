@@ -82,33 +82,21 @@ body {
   background-color: var(--body-background-color);
 }
 
-.site-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.container {
-  display: flex;
-}
-
 main {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
-  margin: 4rem auto;
   gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
 }
  
 /* Header */
 
 header {
-  margin-bottom: 3.5rem;
-  padding: 1rem 0;
-}
-
-.header__container {
-  @extend .site-container;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Sections */
