@@ -34,6 +34,17 @@
 :root {
   --body-color: #001524;
   --body-background-color: #F6F4EB;
+  --header-button-color: #001524;
+  --banner-button-color: #001524;
+  --banner-button-text-color: #FFFFFF;
+}
+
+.dark-mode {
+  --body-color: #FFFFFF;
+  --body-background-color: #090030;
+  --header-button-color: #FFFFFF;
+  --banner-button-color: #FFD95A;
+  --banner-button-text-color: #001524;
 }
 
 body {
@@ -50,6 +61,10 @@ header {
   top: 0;
   padding: 1.5rem;
   box-sizing: border-box;
+}
+
+.header__logo {
+  fill: var(--body-color);
 }
 
 .header__container {
@@ -69,8 +84,9 @@ header {
 .header__button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.25rem;
   line-height: 0;
+  stroke: var(--header-button-color);
 }
 
 /* Banner */
@@ -82,7 +98,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  color: #000000;
 }
 
 .banner__heading {
@@ -104,8 +119,8 @@ header {
 
 .banner__button {
   align-self: flex-start;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--banner-button-color);
+  color: var(--banner-button-text-color);
   padding: 1rem 2rem;
   text-decoration: none;
   font-family: "Basier Circle Medium";
@@ -113,7 +128,6 @@ header {
   letter-spacing: 1px;
   font-size: 14px;
   border-radius: 4px;
-  box-shadow: #e6e4db 10px 10px 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */

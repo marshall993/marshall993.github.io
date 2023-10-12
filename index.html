@@ -14,36 +14,33 @@
   <header class="header">
     <div class="header__container">
       <div class="header__column">
-        <?xml version="1.0" encoding="UTF-8"?>
-        <svg width="25px" height="25px" viewBox="0 0 166 167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="header__logo" width="25px" height="25px" viewBox="0 0 166 167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
         <path d="M116,16 L180.68272,16 L180.68272,80.6827202 L116,16 Z" id="path-1"></path>
         </defs>
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-16.000000, -16.000000)">
-        <rect fill="#000000" transform="translate(99.000000, 99.000000) rotate(-45.000000) translate(-99.000000, -99.000000) " x="59" y="-1" width="80" height="200" rx="40"></rect>
+        <rect fill="currentColor" transform="translate(99.000000, 99.000000) rotate(-45.000000) translate(-99.000000, -99.000000) " x="59" y="-1" width="80" height="200" rx="40"></rect>
         <g>
-        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
-        <path stroke="#000000" stroke-width="1" d="M117.207107,16.5 L180.18272,79.4756134 L180.18272,16.5 L117.207107,16.5 Z"></path>
+        <use fill="currentColor" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <path stroke="currentColor" stroke-width="1" d="M117.207107,16.5 L180.18272,79.4756134 L180.18272,16.5 L117.207107,16.5 Z"></path>
         </g>
-        <path d="M16.3574219,117.705078 L81.040142,117.705078 L81.040142,182.387798 L16.3574219,117.705078 Z" id="Combined-Shape" fill="#000000" transform="translate(48.698782, 150.046438) rotate(-180.000000) translate(-48.698782, -150.046438) "></path>
+        <path d="M16.3574219,117.705078 L81.040142,117.705078 L81.040142,182.387798 L16.3574219,117.705078 Z" id="Combined-Shape" fill="currentColor" transform="translate(48.698782, 150.046438) rotate(-180.000000) translate(-48.698782, -150.046438) "></path>
         </g>
         </g>
         </svg>
       </div>
       <div class="header__column header__column--actions">
-        <button class="header__button">
+        <button class="header__button header__button--menu">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="Vector" d="M6.25 21.25H23.75M6.25 15H23.75M6.25 8.75H23.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.25 21.25H23.75M6.25 15H23.75M6.25 8.75H23.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>            
         </button>
-        <button class="header__button">
+
+        <button class="header__button" data-toggle>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="Environment / Sun">
-            <path id="Vector" d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-            </svg>
-            
+            <path d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
       </div>
     </div>
@@ -56,5 +53,12 @@
       <a class="banner__button" href="#">Hire Me</a>
     </div>
   </section>
+
+  <script>
+    const toggleButton = document.querySelector('[data-toggle]');
+    toggleButton.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
