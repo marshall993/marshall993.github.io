@@ -135,6 +135,16 @@ header {
   padding: 0.25rem;
   line-height: 0;
   stroke: var(--header-button-color);
+
+  &.header__button--toggle {
+    fill: var(--header-button-color);
+  }
+
+  .light-mode & {
+    &.header__button--toggle {
+      fill: none;
+    }
+  }
 }
 
 /* Banner */
