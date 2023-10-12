@@ -51,19 +51,21 @@
 }
 
 :root {
+  --body-color: #FFFFFF;
+  --body-overlay-opacity: 0.85;
+  --body-background-color: #020e0e;
+  --header-button-color: #FFFFFF;
+  --banner-button-color: #dfff00;
+  --banner-button-text-color: #001524;
+}
+
+.light-mode {
   --body-color: #001524;
+  --body-overlay-opacity: 0.95;
   --body-background-color: #F6F4EB;
   --header-button-color: #001524;
   --banner-button-color: #001524;
   --banner-button-text-color: #FFFFFF;
-}
-
-.dark-mode {
-  --body-color: #FFFFFF;
-  --body-background-color: #090030;
-  --header-button-color: #FFFFFF;
-  --banner-button-color: #FFD95A;
-  --banner-button-text-color: #001524;
 }
 
 body,
@@ -80,6 +82,22 @@ body {
   color: var(--body-color);
   font-family: 'Basier Circle';
   background-color: var(--body-background-color);
+  background: url('bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-background-color);
+    opacity: var(--body-overlay-opacity);
+  }
 }
 
 /* Header */
@@ -113,6 +131,7 @@ header {
 .header__button {
   background: none;
   border: none;
+  cursor: pointer;
   padding: 0.25rem;
   line-height: 0;
   stroke: var(--header-button-color);
@@ -126,6 +145,7 @@ header {
   align-items: flex-end;
   padding: 3rem 1.5rem;
   box-sizing: border-box;
+  position: relative;
 }
 
 .banner__content {
