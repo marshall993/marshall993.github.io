@@ -48,6 +48,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   margin: 0;
   box-sizing: border-box;
   color: var(--body-color);
@@ -91,7 +95,7 @@ header {
 
 /* Banner */
 .banner {
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 3rem;
 }
 
 .banner__content {
