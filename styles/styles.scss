@@ -1,63 +1,57 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Cooper Light';
+  src: url('../assets/cooperbt-light-webfont.woff2') format('woff2'),
+       url('../assets/cooperbt-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Medium';
+  src: url('../assets/cooperbt-medium-webfont.woff2') format('woff2'),
+       url('../assets/cooperbt-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'Basier Circle';
-  src: url('BasierCircle-Regular.eot');
-  src: local('Basier Circle Regular'), local('BasierCircle-Regular'),
-      url('BasierCircle-Regular.eot?#iefix') format('embedded-opentype'),
-      url('BasierCircle-Regular.woff2') format('woff2'),
-      url('BasierCircle-Regular.woff') format('woff'),
-      url('BasierCircle-Regular.ttf') format('truetype');
+  src: url('../assets/BasierCircle-Regular.woff2') format('woff2'),
+       url('../assets/BasierCircle-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Basier Circle Medium';
-  src: url('BasierCircle-Medium.eot');
-  src: local('Basier Circle Medium'), local('BasierCircle-Medium'),
-      url('BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
-      url('BasierCircle-Medium.woff2') format('woff2'),
-      url('BasierCircle-Medium.woff') format('woff'),
-      url('BasierCircle-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+  src: url('../assets/BasierCircle-Medium.woff2') format('woff2'),
+       url('../assets/BasierCircle-Medium.woff') format('woff');
+  font-weight: 500;  
+  font-style: normal; 
 }
 
 @font-face {
   font-family: 'Basier Circle Bold';
-  src: url('BasierCircle-Bold.eot');
-  src: local('Basier Circle Bold'), local('BasierCircle-Bold'),
-      url('BasierCircle-Bold.eot?#iefix') format('embedded-opentype'),
-      url('BasierCircle-Bold.woff2') format('woff2'),
-      url('BasierCircle-Bold.woff') format('woff'),
-      url('BasierCircle-Bold.ttf') format('truetype');
+  src: url('../assets/BasierCircle-Bold.woff2') format('woff2'),
+       url('../assets/BasierCircle-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'cooper_lt_btlight';
-  src: url('cooperbt-light-webfont.woff2') format('woff2'),
-       url('cooperbt-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'cooper_md_btmedium';
-  src: url('cooperbt-medium-webfont.woff2') format('woff2'),
-       url('cooperbt-medium-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+/* Root */
 
 :root {
   --body-color: #FFFFFF;
   --body-overlay-opacity: 0.85;
   --body-background-color: #020e0e;
   --header-button-color: #FFFFFF;
-  --banner-button-color: #dfff00;
+  --banner-button-color: #C1F71E;
   --banner-button-text-color: #001524;
 }
+
+/* Modes */
 
 .light-mode {
   --body-color: #001524;
@@ -67,6 +61,8 @@
   --banner-button-color: #001524;
   --banner-button-text-color: #FFFFFF;
 }
+
+/* General */
 
 body,
 html {
@@ -80,9 +76,9 @@ body {
   margin: 0;
   box-sizing: border-box;
   color: var(--body-color);
-  font-family: 'Basier Circle';
+  font-family: "circular_stdbook";
   background-color: var(--body-background-color);
-  background: url('bg.jpg');
+  background: url('../assets/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,6 +103,7 @@ header {
   top: 0;
   padding: 1.5rem;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .header__logo {
@@ -132,6 +129,7 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  color: #ffffff;
   padding: 0.25rem;
   line-height: 0;
   stroke: var(--header-button-color);
@@ -165,13 +163,13 @@ header {
 }
 
 .banner__heading {
-  font-weight: normal;
   margin: 0;
   font-size: 2rem;
-  font-family: 'cooper_lt_btlight'; 
+  font-weight: normal;
+  font-family: 'Cooper Light'; 
 
   span {
-    font-family: 'cooper_md_btmedium';
+    font-family: 'Cooper Medium';
   }
 }
 
@@ -188,10 +186,56 @@ header {
   color: var(--banner-button-text-color);
   padding: 1rem 2rem;
   text-decoration: none;
-  font-family: 'Basier Circle Medium';
+  font-family: 'Basier Circle Bold';
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
   border-radius: 4px;
-  // box-shadow: #e6e4db 10px 10px 0px;
+}
+
+nav {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-background-color);
+  padding: 2rem;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  transition: 0.5s;
+
+  &.nav--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      color: #FFFFFF;
+      font-size: 2rem;
+      text-decoration: none;
+      font-family: 'Basier Circle';
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+  }
 }

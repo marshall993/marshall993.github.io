@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scott Marshall - Front End Developer</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+  <nav data-nav>
+    <ul>
+      <li>
+        <a href="#">CV</a>
+      </li>
+      <li>
+        <a href="#">Themes</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </nav>
   <header class="header">
     <div class="header__container">
       <div class="header__column">
@@ -30,17 +40,18 @@
         </g>
         </svg>
       </div>
+
       <div class="header__column header__column--actions">
-        <button class="header__button header__button--menu">
+        <button class="header__button header__button--toggle" data-toggle>
+          <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.25 5.49992C8.25 10.0563 11.9437 13.7499 16.5 13.7499C17.3335 13.7499 18.1381 13.6266 18.8965 13.3968C17.8698 16.7843 14.7229 19.2498 11 19.2498C6.44365 19.2498 2.75 15.5564 2.75 11C2.75 7.27718 5.2159 4.13026 8.60347 3.10352C8.3736 3.86194 8.25 4.66643 8.25 5.49992Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <button class="header__button header__button--menu" data-menu-toggle>
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.25 21.25H23.75M6.25 15H23.75M6.25 8.75H23.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>            
-        </button>
-
-        <button class="header__button header__button--toggle" data-toggle>
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 6C9 10.9706 13.0294 15 18 15C18.9093 15 19.787 14.8655 20.6144 14.6147C19.4943 18.3103 16.0613 20.9999 12 20.9999C7.02944 20.9999 3 16.9707 3 12.0001C3 7.93883 5.69007 4.50583 9.38561 3.38574C9.13484 4.21311 9 5.09074 9 6Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
         </button>
       </div>
     </div>
@@ -56,8 +67,15 @@
 
   <script>
     const toggleButton = document.querySelector('[data-toggle]');
+    const menuToggle = document.querySelector('[data-menu-toggle]');
+    const nav = document.querySelector('[data-nav]');
+
     toggleButton.addEventListener('click', function() {
       document.body.classList.toggle('light-mode');
+    });
+
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('nav--active');
     });
   </script>
 </body>
