@@ -41,16 +41,56 @@
         </svg>
       </div>
 
-      <div class="header__column header__column--actions">
-        <button class="header__button header__button--toggle" data-toggle>
-          <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.25 5.49992C8.25 10.0563 11.9437 13.7499 16.5 13.7499C17.3335 13.7499 18.1381 13.6266 18.8965 13.3968C17.8698 16.7843 14.7229 19.2498 11 19.2498C6.44365 19.2498 2.75 15.5564 2.75 11C2.75 7.27718 5.2159 4.13026 8.60347 3.10352C8.3736 3.86194 8.25 4.66643 8.25 5.49992Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <div 
+        class="
+          header__column 
+          header__column--actions
+        "
+      >
+        <button 
+          class="
+            header__button 
+            header__button--toggle
+          "
+          aria-label="Light mode"
+          data-light-mode
+        >
+          <svg 
+            width="22" 
+            height="22" 
+            viewBox="0 0 22 22" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              d="M8.25 5.49992C8.25 10.0563 11.9437 13.7499 16.5 13.7499C17.3335 13.7499 18.1381 13.6266 18.8965 13.3968C17.8698 16.7843 14.7229 19.2498 11 19.2498C6.44365 19.2498 2.75 15.5564 2.75 11C2.75 7.27718 5.2159 4.13026 8.60347 3.10352C8.3736 3.86194 8.25 4.66643 8.25 5.49992Z" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            />
           </svg>
         </button>
 
-        <button class="header__button header__button--menu" data-menu-toggle>
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.25 21.25H23.75M6.25 15H23.75M6.25 8.75H23.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <button 
+          class="
+            header__button 
+            header__button--menu
+          " 
+          aria-label="Menu"
+          data-menu
+        >
+          <svg 
+            width="30" 
+            height="30" 
+            viewBox="0 0 30 30" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              d="M6.25 21.25H23.75M6.25 15H23.75M6.25 8.75H23.75" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            />
           </svg>            
         </button>
       </div>
@@ -60,14 +100,14 @@
   <section class="banner">
     <div class="banner__content"> 
       <h1 class="banner__heading">Hi, <span>I'm Scott</span>, a Front End Developer who specializes in creating and customizing Shopify themes.</h1>
-      <p class="banner__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint saepe aliquam quibusdam eius laudantium.</p>
-      <a class="banner__button" href="#">Hire Me</a>
+      <p class="banner__text">I strive to deliver immersive product experiences through intuitive design.</p>
+      <a class="banner__button" href="#">Work with me</a>
     </div>
   </section>
 
   <script>
-    const toggleButton = document.querySelector('[data-toggle]');
-    const menuToggle = document.querySelector('[data-menu-toggle]');
+    const toggleButton = document.querySelector('[data-light-mode]');
+    const menuToggle = document.querySelector('[data-menu]');
     const nav = document.querySelector('[data-nav]');
 
     toggleButton.addEventListener('click', function() {

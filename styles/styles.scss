@@ -175,7 +175,7 @@ header {
 
 .banner__text {
   font-family: 'Basier Circle';
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.65;
   margin: 0;
 }
@@ -184,7 +184,7 @@ header {
   align-self: flex-start;
   background-color: var(--banner-button-color);
   color: var(--banner-button-text-color);
-  padding: 1rem 2rem;
+  padding: 1rem;
   text-decoration: none;
   font-family: 'Basier Circle Bold';
   text-transform: uppercase;
@@ -229,7 +229,7 @@ nav {
       align-items: center;
       justify-content: center;
       padding: 0.5rem;
-      color: #FFFFFF;
+      color: var(--body-color);
       font-size: 2rem;
       text-decoration: none;
       font-family: 'Basier Circle';
