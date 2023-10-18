@@ -1,97 +1,116 @@
 /* Fonts */
 @font-face {
-  font-family: "Cooper Light";
-  src: url("../assets/cooperbt-light-webfont.woff2") format("woff2"), url("../assets/cooperbt-light-webfont.woff") format("woff");
+  font-family: "honestblack";
+  src: url("../assets/fonts/honest-black-webfont.woff2") format("woff2"), url("../assets/fonts/honest-black-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Cooper Medium";
-  src: url("../assets/cooperbt-medium-webfont.woff2") format("woff2"), url("../assets/cooperbt-medium-webfont.woff") format("woff");
+  font-family: "honestblack_italic";
+  src: url("../assets/fonts/honest-blackitalic-webfont.woff2") format("woff2"), url("../assets/fonts/honest-blackitalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Basier Circle";
-  src: url("../assets/BasierCircle-Regular.woff2") format("woff2"), url("../assets/BasierCircle-Regular.woff") format("woff");
+  font-family: "honestbold";
+  src: url("../assets/fonts/honest-bold-webfont.woff2") format("woff2"), url("../assets/fonts/honest-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Basier Circle Medium";
-  src: url("../assets/BasierCircle-Medium.woff2") format("woff2"), url("../assets/BasierCircle-Medium.woff") format("woff");
-  font-weight: 500;
+  font-family: "honestbold_italic";
+  src: url("../assets/fonts/honest-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/honest-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Basier Circle Bold";
-  src: url("../assets/BasierCircle-Bold.woff2") format("woff2"), url("../assets/BasierCircle-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: "honestheavy";
+  src: url("../assets/fonts/honest-heavy-webfont.woff2") format("woff2"), url("../assets/fonts/honest-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestheavy_italic";
+  src: url("../assets/fonts/honest-heavyitalic-webfont.woff2") format("woff2"), url("../assets/fonts/honest-heavyitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestitalic";
+  src: url("../assets/fonts/honest-italic-webfont.woff2") format("woff2"), url("../assets/fonts/honest-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestlight";
+  src: url("../assets/fonts/honest-light-webfont.woff2") format("woff2"), url("../assets/fonts/honest-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestlight_italic";
+  src: url("../assets/fonts/honest-lightitalic-webfont.woff2") format("woff2"), url("../assets/fonts/honest-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestmedium";
+  src: url("../assets/fonts/honest-medium-webfont.woff2") format("woff2"), url("../assets/fonts/honest-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestmedium_italic";
+  src: url("../assets/fonts/honest-mediumitalic-webfont.woff2") format("woff2"), url("../assets/fonts/honest-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "honestregular";
+  src: url("../assets/fonts/honest-regular-webfont.woff2") format("woff2"), url("../assets/fonts/honest-regular-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 /* Root */
 :root {
-  --body-color: #FFFFFF;
-  --body-overlay-opacity: 0.85;
-  --body-background-color: #020e0e;
-  --header-button-color: #FFFFFF;
-  --banner-button-color: #C1F71E;
-  --banner-button-text-color: #001524;
+  --body-color: #001524;
+  --body-background-color: #F6F4EB;
+  --header-button-color: #001524;
 }
 
 /* Modes */
-.light-mode {
-  --body-color: #001524;
-  --body-overlay-opacity: 0.95;
-  --body-background-color: #F6F4EB;
-  --header-button-color: #001524;
-  --banner-button-color: #001524;
-  --banner-button-text-color: #FFFFFF;
+.dark-mode {
+  --body-color: #FFFFFF;
+  --body-background-color: #001524;
+  --header-button-color: #FFFFFF;
 }
 
 /* General */
-body,
-html {
-  height: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
   box-sizing: border-box;
   color: var(--body-color);
+  background-color: var(--body-background-color);
   font-family: "circular_stdbook";
-  background-color: var(--body-background-color);
-  background: url("../assets/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-body:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--body-background-color);
-  opacity: var(--body-overlay-opacity);
 }
 
 /* Header */
-header {
-  position: sticky;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
   top: 0;
-  padding: 1.5rem;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
   box-sizing: border-box;
-  z-index: 2;
 }
 
 .header__logo {
-  fill: var(--body-color);
+  color: var(--body-color);
+  line-height: 0;
 }
 
 .header__container {
@@ -106,112 +125,117 @@ header {
 .header__column.header__column--actions {
   display: flex;
   gap: 0.5rem;
+  margin-right: -0.25rem;
 }
 
 .header__button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #ffffff;
   padding: 0.25rem;
   line-height: 0;
-  stroke: var(--header-button-color);
 }
-.header__button.header__button--toggle {
-  fill: var(--header-button-color);
+.header__button svg path {
+  fill: var(--body-color);
 }
-.light-mode .header__button.header__button--toggle {
+.dark-mode .header__button svg path {
   fill: none;
 }
-
-/* Banner */
-.banner {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-  padding: 3rem 1.5rem;
-  box-sizing: border-box;
-  position: relative;
+.header__button svg path:first-child {
+  fill: none;
+}
+.dark-mode .header__button svg path:first-child {
+  fill: var(--body-color);
 }
 
-.banner__content {
+/* Hero */
+.hero {
+  display: flex;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .hero {
+    align-items: center;
+    padding: 2rem 10rem;
+  }
+}
+
+.hero__content {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.banner__heading {
+.hero__heading {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: normal;
-  font-family: "Cooper Light";
+  font-family: "honestmedium";
 }
-.banner__heading span {
-  font-family: "Cooper Medium";
+.hero__heading span {
+  font-family: "honestbold";
+}
+@media (min-width: 768px) {
+  .hero__heading {
+    font-size: 4rem;
+  }
 }
 
-.banner__text {
-  font-family: "Basier Circle";
-  font-size: 17px;
-  line-height: 1.65;
+.hero__text {
+  display: flex;
+  align-items: center;
+}
+
+.hero__text-accent {
+  display: none;
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  background-color: var(--body-color);
+}
+@media (min-width: 768px) {
+  .hero__text-accent {
+    display: block;
+  }
+}
+
+.hero__subheading {
   margin: 0;
+  font-size: 18px;
+  font-family: "honestmedium_italic";
+  line-height: 1.65;
+}
+@media (min-width: 768px) {
+  .hero__subheading {
+    font-size: 24px;
+    padding-left: 3rem;
+  }
 }
 
-.banner__button {
+.hero__button {
+  display: flex;
+  align-items: center;
   align-self: flex-start;
-  background-color: var(--banner-button-color);
-  color: var(--banner-button-text-color);
+  gap: 0.5rem;
+  color: var(--body-background-color);
+  background-color: var(--body-color);
   padding: 1rem;
   text-decoration: none;
-  font-family: "Basier Circle Bold";
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-  border-radius: 4px;
+  font-family: "honestbold_italic";
+  border-radius: 50px;
 }
-
-nav {
-  visibility: hidden;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--body-background-color);
-  padding: 2rem;
-  box-sizing: border-box;
-  z-index: 1;
-  text-align: center;
-  transition: 0.5s;
-}
-nav.nav--active {
-  visibility: visible;
-  opacity: 1;
-}
-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-nav ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  color: var(--body-color);
-  font-size: 2rem;
-  text-decoration: none;
-  font-family: "Basier Circle";
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 16px;
+@media (min-width: 768px) {
+  .hero__button {
+    font-size: 18px;
+    padding: 1.5rem;
+    align-self: flex-end;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
