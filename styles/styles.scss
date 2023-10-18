@@ -114,6 +114,11 @@
 
 /* General */
 
+body, 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   overflow: hidden;
