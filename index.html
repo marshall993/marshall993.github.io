@@ -80,24 +80,73 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero__content">
-      <h1 class="hero__heading">Hi, <span>I'm Scott</span>, a Front End Developer specializing in creating and customizing Shopify themes.</h1>
+  <main> 
+    <section class="section">
+      <div class="section__container">
+        <div class="section__content">
+          <h1 class="section__heading">Hi, <span>I'm Scott</span>, a Front End Developer specializing in creating and customizing Shopify themes.</h1>
+          
+          <div class="section__text">
+            <div class="section__accent"></div>
+            <p class="section__subheading">I strive to deliver immersive product experiences through intuitive design.</p>
+          </div>
+          
+          <a href="#" class="section__button">
+            <span>Start a project</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 8L1 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 15L15 8L8 0.999999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
 
-      <div class="hero__text">
-        <div class="hero__text-accent"></div>
-        <p class="hero__subheading">I strive to deliver immersive product experiences through intuitive design.</p>
+        <nav class="section__nav">
+          <ul class="section__nav-list">
+            <li>
+              <a 
+                class="section__nav-link"
+                href="https://github.com/marshall993"
+                target="_blank"
+              >
+                <span>Github</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 7H17M17 7V17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                   
+              </a>
+            </li>
+
+            <li>
+              <a 
+                class="section__nav-link"
+                href="https://codepen.io/ScottMarshall"
+                target="_blank"
+              >
+                <span>Codepen</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 7H17M17 7V17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+              </a>
+            </li>
+
+            <li>
+              <a 
+                class="section__nav-link"
+                href="https://www.linkedin.com/in/scottmarshall993/"
+                target="_blank"
+              >
+                <span>LinkedIn</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 7H17M17 7V17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <a href="#" class="hero__button">
-        <span>Start a project</span>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 8L1 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 15L15 8L8 0.999999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </section>
+    </section>
+    <section>
+    </section>
+  </main>
 
   <script>
     const mode = document.querySelector('[data-mode]');

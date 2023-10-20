@@ -112,15 +112,14 @@
   --header-button-color: #FFFFFF;
 }
 
-/* General */
-
-body {
+body,
+html {
   margin: 0;
+  height: 100%;
   overflow: hidden;
-  box-sizing: border-box;
   color: var(--body-color);
+  font-family: 'honestmedium';
   background-color: var(--body-background-color);
-  font-family: "circular_stdbook";
 }
 
 /* Header */
@@ -184,31 +183,45 @@ body {
   }
 }
 
-/* Hero */
+/* Main */
 
-.hero {
+main {
   display: flex;
-  align-items: flex-end;
-  width: 100vw;
-  height: 100dvh;
+  flex-direction: row;
+  height: 100vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+/* Section */
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 0 100%;
+  height: 100%;
   padding: 2rem;
+  scroll-snap-align: start;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    align-items: center;
-    padding: 2rem 10rem;
+    justify-content: center;
   }
 }
 
-.hero__content {
-  max-width: 1400px;
+.section__container {
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.section__content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.hero__heading {
+.section__heading {
   margin: 0;
   font-size: 1.75rem;
   font-weight: normal;
@@ -223,16 +236,16 @@ body {
   }
 }
 
-.hero__text {
+.section__text {
   display: flex;
   align-items: center;
 }
 
-.hero__text-accent {
+.section__accent {
   display: none;
   flex: 1;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: var(--body-color);
 
   @media (min-width: 768px) {
@@ -240,10 +253,10 @@ body {
   }
 }
 
-.hero__subheading {
+.section__subheading {
   margin: 0;
   font-size: 18px;
-  font-family: 'honestmedium_italic';
+  font-family: 'honestmedium';
   line-height: 1.65;
   
   @media (min-width: 768px) {
@@ -252,7 +265,7 @@ body {
   }
 }
 
-.hero__button {
+.section__button {
   display: flex;
   align-items: center;
   align-self: flex-start;
@@ -261,7 +274,7 @@ body {
   background-color: var(--body-color);
   padding: 1rem;
   text-decoration: none;
-  font-family: 'honestbold_italic';
+  font-family: 'honestbold';
   border-radius: 50px;
 
   @media (min-width: 768px) {
@@ -269,4 +282,26 @@ body {
     padding: 1.5rem;
     align-self: flex-end;
   }
+}
+
+.section__nav-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 1.25rem;
+  }
+}
+
+.section__nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 18px;
+  font-family: 'honestbold';
+  text-decoration: none;
+  color: var(--body-color);
 }
