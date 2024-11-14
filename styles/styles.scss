@@ -121,7 +121,7 @@ h2 {
 }
 
 h3 {
-  font-size: var(--font-size-h3-mobile);
+  font-size: clamp(24px, 2vw + 1rem, 60px);
 }
 
 h1, h3 {
@@ -131,10 +131,6 @@ h1, h3 {
 h3 {
   font-family: "honest";
   font-weight: bold;
-
-  @media only screen and (min-width: 720px) {
-    font-size: 3rem;
-  }
 }
 
 html {
