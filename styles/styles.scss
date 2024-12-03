@@ -126,7 +126,7 @@ html {
 
 .button {
   display: inline-block;
-  padding: 0.75rem;
+  padding: 1rem;
   font-size: 12px;
   border-radius: 5px;
   text-decoration: none;
@@ -134,25 +134,26 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  outline-offset: 0.25rem;
 
   &--primary {
     background-color: var(--color-primary);
-    outline: 2px solid var(--color-primary);
-
-    &:hover {
-    }
   }
 
   &--secondary {
     background-color: #FFF;
-    outline: 1px solid #FFF;
   }
 
   @media only screen and (min-width: 720px) {
+    padding: 1.25rem 1.5rem;
     font-size: 14px;
-    padding: 1rem 1.5rem;
   }
+}
+
+button {
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
 
 section {
@@ -263,65 +264,67 @@ section {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 1600px;
-  margin: 0 auto;
-  box-sizing: border-box;
   text-align: center;
-}
 
-.footer__promotion {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 5rem;
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
 
-  @media only screen and (min-width: 720px) {
-    padding: 10rem 5rem;
+    @media only screen and (min-width: 720px) {
+      padding: 8rem 2.5rem;
+    }
   }
-}
 
-.footer__text {
-  margin: 0;
-  letter-spacing: 1px;
-  line-height: 1;
-
-  @media only screen and (min-width: 720px) {
-    font-size: 2.25rem;
+  &__text {
+    margin: 0;
+    letter-spacing: 1px;
+  
+    @media only screen and (min-width: 720px) {
+      font-size: 2.25rem;
+    }
   }
-}
 
-.footer__link {
-  font-family: "honest";
-  font-weight: 900;
-  text-decoration: none;
-  color: var(--color-primary);
-
-  @media only screen and (min-width: 720px) {
-    font-size: 3rem;
+  &__link {
+    font-family: "honest";
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--color-primary);
+  
+    @media only screen and (min-width: 720px) {
+      font-size: 3rem;
+    }
   }
-}
 
-.footer__meta {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
-
-  @media only screen and (min-width: 720px) {
-    flex-direction: row;
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  
+    @media only screen and (min-width: 720px) {
+      flex-direction: row;
+    }
   }
-}
 
-.footer__meta-item {
-  color: #575757;
-  font-size: 1rem;
+  &__meta-item {
+    color: #575757;
+    font-size: 1rem;
+
+    &:last-child {
+      display: none;
+      
+      @media only screen and (min-width: 720px) {
+        display: block;
+      }
+    }
+  }
 }
 
 article {
@@ -406,15 +409,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
 }
 
 .header__brand {
   display: block;
-  max-width: 45px;
+  max-width: 40px;
   line-height: 0;
 }
 
@@ -459,9 +458,13 @@ header {
   }
 }
 
-button {
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+
+  &--wide {
+    max-width: 1600px;
+  }
 }
