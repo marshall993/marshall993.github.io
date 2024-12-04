@@ -422,8 +422,12 @@ img {
 }
 
 .header__link {
+  display: block;
   color: #FFF;
   font-size: 18px;
+}
+.header__link--has-icon {
+  line-height: 0;
 }
 .header__link:hover {
   color: var(--color-primary);
