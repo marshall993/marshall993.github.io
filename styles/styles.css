@@ -443,4 +443,48 @@ img {
   max-width: 1600px;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.contact-form__field {
+  position: relative;
+}
+.contact-form__input {
+  width: 100%;
+  outline: none;
+  padding: 0.85rem;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background-color: transparent;
+}
+.contact-form__input::placeholder {
+  opacity: 0;
+}
+.contact-form__input:focus {
+  transition: 0.5s;
+  border-color: var(--color-primary);
+}
+.contact-form__input:focus + label {
+  transform: translateY(calc(-50% - 0.75rem)) scale(0.8);
+  color: var(--color-primary);
+  background-color: #000;
+}
+.contact-form__input__input:not(:placeholder-shown) + label {
+  transform: translateY(calc(-50% - 0.75rem)) scale(0.8);
+  background-color: #000;
+  color: var(--color-primary);
+}
+.contact-form__label {
+  transition: 0.5s;
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  font-size: 16px;
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
